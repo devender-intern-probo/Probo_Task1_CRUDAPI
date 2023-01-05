@@ -44,7 +44,7 @@ app.post("/user", function (req, res) {
       .send({ error: true, message: "Please provide user" });
   }
   connectionForMysql.query(
-    `INSERT INTO users values("${user.First_Name}","${user.Last_Name}","${user.Email}",${user.Mobile},${user.ID},"${user.Gender}") `,
+    `INSERT INTO users values("${user.First_Name}","${user.Last_Name}","${user.Email}",${user.Mobile},${user.ID},"${user.Gender}","${user.Image}") `,
     // { user: user },
     function (error, results) {
       if (error) throw error;
